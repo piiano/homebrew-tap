@@ -9,17 +9,17 @@ class PvaultServer < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.2.1-dev/pvault-server-v1.2.1-dev-darwin_arm64.tar.gz"
-      sha256 "c35a63c1ecedeb58e877d253fd03dc45aeee855b65532a675c8394042ad8d3ae"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.2.1-dev/pvault-server-v1.2.1-dev-darwin_amd64.tar.gz"
+      sha256 "5d1f58425e314ac03a939bdf01fc19464a21773319a67ce5e86d48ccb0feaa55"
 
       def install
         bin.install "pvault-server"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.2.1-dev/pvault-server-v1.2.1-dev-darwin_amd64.tar.gz"
-      sha256 "6a993f830bd5e450eae9326ee59f1a1fceee5c159f7562337f9b1504cc434af2"
+    if Hardware::CPU.arm?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.2.1-dev/pvault-server-v1.2.1-dev-darwin_arm64.tar.gz"
+      sha256 "82c4d4eb94a11e849c55c793da4e3724f6f8874eea2d03e92c78955a4f0c62d0"
 
       def install
         bin.install "pvault-server"
@@ -30,7 +30,7 @@ class PvaultServer < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/piiano/vault-releases/releases/download/v1.2.1-dev/pvault-server-v1.2.1-dev-linux_amd64.tar.gz"
-      sha256 "be0ea7e91f5efe0f1e78d54eacf29a4971138f473450ed4f6790403ea11f5d4d"
+      sha256 "5cd18db0a03337443e58073d3c6a11f8d92b70c023d39b883e88cd8be2fd9490"
 
       def install
         bin.install "pvault-server"
