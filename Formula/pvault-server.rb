@@ -11,7 +11,7 @@ class PvaultServer < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/piiano/vault-releases/releases/download/v1.3.0-rc1/pvault-server-v1.3.0-rc1-darwin_arm64.tar.gz"
-      sha256 "0783e394a60dc7b5db403f9ab17782f65786447ce5d2b3970fc618f31ec56125"
+      sha256 "78caec0c4e1bdc071b5e7e1e6ec3f8ac933d5d7dd6eb3be1bbd1e7499f1a65fb"
 
       def install
         bin.install "pvault-server"
@@ -19,7 +19,7 @@ class PvaultServer < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/piiano/vault-releases/releases/download/v1.3.0-rc1/pvault-server-v1.3.0-rc1-darwin_amd64.tar.gz"
-      sha256 "a5040905f91fb59579be91019944aa0106635cd47f3f793924ef0004bca90954"
+      sha256 "2926b62609b0484c7c98083b252c02c02b1cd9309754f5c5c4b4b3faa643333c"
 
       def install
         bin.install "pvault-server"
@@ -30,7 +30,7 @@ class PvaultServer < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/piiano/vault-releases/releases/download/v1.3.0-rc1/pvault-server-v1.3.0-rc1-linux_arm64.tar.gz"
-      sha256 "33ef870f5f1c1b9c65617bb2f5046ce50ac5d0c4e372b120a01957563f6cfd56"
+      sha256 "c0a8ba390fded7a5ac6e51a0f835a6cd103513bb5770edf94fbbf3d338e9dce6"
 
       def install
         bin.install "pvault-server"
@@ -38,7 +38,7 @@ class PvaultServer < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/piiano/vault-releases/releases/download/v1.3.0-rc1/pvault-server-v1.3.0-rc1-linux_amd64.tar.gz"
-      sha256 "131a958b8acb561559104251c9016c285b81394d83e22a5e3e0cc088f9e0c8e1"
+      sha256 "76bd0acd30dbf279defbe7d8e5e8bce4d82044aa5dfd251a263861ffc0c64db5"
 
       def install
         bin.install "pvault-server"
