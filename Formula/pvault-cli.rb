@@ -11,7 +11,7 @@ class PvaultCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-darwin_arm64.tar.gz"
-      sha256 "e03f40b0bfd89d5cd0f7212737ef304c9530cb0b29722d2c8f5a8eddb2fba53d"
+      sha256 "1685153bb7c3fe65d7a3a0de2e6f5bc8a06ce8f1ec2af1ed87006d93686a75ed"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -21,7 +21,7 @@ class PvaultCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-darwin_amd64.tar.gz"
-      sha256 "2b340a0cc711c1176da0cf0c4d55835c72adaecd91c0124d3483b84a4e03f06d"
+      sha256 "31080483dbbf31059fbb3d5d700480d44a4d369f9261e5efea6e2c02e5ba7150"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -34,7 +34,7 @@ class PvaultCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-linux_arm64.tar.gz"
-      sha256 "c8e3354ba377fe4745df8db5cfb138f57f11d3d768c3f3dd57cf2ea5a83adcc0"
+      sha256 "2a730ce90ee1a02fdf7f958f8394e263f659490facce4ef29798755a336a44dc"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -44,7 +44,7 @@ class PvaultCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-linux_amd64.tar.gz"
-      sha256 "6963652017c4dcf50cde31a271876b7f7a14ac3d09bb51c873a74333691d4382"
+      sha256 "d7867df1a83932d5dc15ce2434c19eedf988e6a67c69a109f9f9633fe18840df"
 
       def install
         bin.install "pvault-cli" => "pvault"
