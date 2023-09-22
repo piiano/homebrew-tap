@@ -5,13 +5,13 @@
 class PvaultCli < Formula
   desc ""
   homepage "https://piiano.com"
-  version "1.8.2"
+  version "1.8.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-darwin_arm64.tar.gz"
-      sha256 "1685153bb7c3fe65d7a3a0de2e6f5bc8a06ce8f1ec2af1ed87006d93686a75ed"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-cli-v1.8.3-darwin_arm64.tar.gz"
+      sha256 "60e6f580006e80115449977abb02e97be3bcc69480d4a9b9b9333eada5e0ec2e"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -20,8 +20,8 @@ class PvaultCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-darwin_amd64.tar.gz"
-      sha256 "31080483dbbf31059fbb3d5d700480d44a4d369f9261e5efea6e2c02e5ba7150"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-cli-v1.8.3-darwin_amd64.tar.gz"
+      sha256 "ae8712cdaa984bea4b99b2c5edbb5ab29a65abb5579adb913af82d426260633b"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -33,8 +33,8 @@ class PvaultCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-linux_arm64.tar.gz"
-      sha256 "2a730ce90ee1a02fdf7f958f8394e263f659490facce4ef29798755a336a44dc"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-cli-v1.8.3-linux_arm64.tar.gz"
+      sha256 "bf34516ad75e87f9f0ec33cfa525f504f6108bf4f46c684e9187797d1506af82"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -43,8 +43,8 @@ class PvaultCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.2/pvault-cli-v1.8.2-linux_amd64.tar.gz"
-      sha256 "d7867df1a83932d5dc15ce2434c19eedf988e6a67c69a109f9f9633fe18840df"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-cli-v1.8.3-linux_amd64.tar.gz"
+      sha256 "36219cbaf7b50220504add2f1a4142b7bfc2abe2ed0e035f35578ee992d7a077"
 
       def install
         bin.install "pvault-cli" => "pvault"
