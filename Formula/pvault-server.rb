@@ -5,21 +5,21 @@
 class PvaultServer < Formula
   desc ""
   homepage "https://piiano.com"
-  version "1.8.3"
+  version "1.9.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-server-v1.8.3-darwin_amd64.tar.gz"
-      sha256 "c93ce746fcd13bfdf82d7d8a64ec9644bebc04ba672a196108b6004c6c74264e"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.0/pvault-server-v1.9.0-darwin_amd64.tar.gz"
+      sha256 "1e0916147e56aa48e89bbc66932fde8c8be38b1130a4c3599209da404c34eb88"
 
       def install
         bin.install "pvault-server"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-server-v1.8.3-darwin_arm64.tar.gz"
-      sha256 "1d037df08dde37177b6063cade95cafe18011e537c9651e47f6b3a397bb5db3f"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.0/pvault-server-v1.9.0-darwin_arm64.tar.gz"
+      sha256 "99e1fd35b7a2c9dc902db79019fcc51b88d6eb68245c79bb86f08dc512f004af"
 
       def install
         bin.install "pvault-server"
@@ -29,16 +29,16 @@ class PvaultServer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-server-v1.8.3-linux_arm64.tar.gz"
-      sha256 "c67e7ae658fc1ea819f5cc896e5b8abaeaace523b9a794fd3a02c70ad58f068f"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.0/pvault-server-v1.9.0-linux_arm64.tar.gz"
+      sha256 "8e31fae2b5317da011583c6a7c3623a4f3cb01a252ba859b0ce8972a448217b0"
 
       def install
         bin.install "pvault-server"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.8.3/pvault-server-v1.8.3-linux_amd64.tar.gz"
-      sha256 "839c8436802dc8016af6685938ab226fddf324fae386aebfcb733c3077166d92"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.0/pvault-server-v1.9.0-linux_amd64.tar.gz"
+      sha256 "44bb71d4af0f95ba6b31846868244a5003c6c9e9a1a3a3a2edb00dbc003b8a86"
 
       def install
         bin.install "pvault-server"
