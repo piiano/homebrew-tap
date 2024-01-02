@@ -11,7 +11,7 @@ class PvaultCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-cli-v1.9.7-darwin_arm64.tar.gz"
-      sha256 "0feba5522fec9a405cc18767d0b1a55ba295832ccfc82c006a32d3fbaa21d57c"
+      sha256 "f8a2db885bb09c34aa236a8f91fdb9e5643575b8eb62299d79d3f67f7dd9cc74"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -21,7 +21,7 @@ class PvaultCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-cli-v1.9.7-darwin_amd64.tar.gz"
-      sha256 "9215671bb32badca9848a79455b74800026c80c475e517cf51cf25129432b1da"
+      sha256 "75f2369909c824ef550dc76a7493c0f2a4f16227b07da5ccf9e8ecbd088ca7bb"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -32,9 +32,9 @@ class PvaultCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-cli-v1.9.7-linux_arm64.tar.gz"
-      sha256 "6e51f0f43776b78b43e5a83180372db1102e7628004c528491337f4081802773"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-cli-v1.9.7-linux_amd64.tar.gz"
+      sha256 "0641ff9a50660a6abc337feb2bcb1ff20410ab83dd3928c1869a564be70495cc"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -42,9 +42,9 @@ class PvaultCli < Formula
         (zsh_completion/"_pvault").write Utils.safe_popen_read("#{bin}/pvault completions zsh")
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-cli-v1.9.7-linux_amd64.tar.gz"
-      sha256 "2ed6eaff1a33aa6a3758f0592b1769a76916e3945649155c73c668e337581073"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-cli-v1.9.7-linux_arm64.tar.gz"
+      sha256 "532e61dbec6cbc1443ae5c3e40a36a6cceb6bcf41c0c2779430eeae2cf9f4667"
 
       def install
         bin.install "pvault-cli" => "pvault"
