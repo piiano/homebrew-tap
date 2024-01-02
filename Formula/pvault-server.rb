@@ -9,17 +9,17 @@ class PvaultServer < Formula
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-darwin_arm64.tar.gz"
-      sha256 "2af6e9e65f08db32ff635d56ee7c528ca1f770ab18b0e6fe8de5455ac00b19e3"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-darwin_amd64.tar.gz"
+      sha256 "b66429a5f55f6f56b799448a25db9ec02bc630bc2a3ba4ae8581eade78c24b17"
 
       def install
         bin.install "pvault-server"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-darwin_amd64.tar.gz"
-      sha256 "7818d1b1f6f816b2124b34305f95f88cd863db22226f2e6f05073b80dc84ec87"
+    if Hardware::CPU.arm?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-darwin_arm64.tar.gz"
+      sha256 "1a20f97fc5b6fb424e774e366aeb814bdf8cfe4f2395b20b694afc4a097273f1"
 
       def install
         bin.install "pvault-server"
@@ -28,17 +28,17 @@ class PvaultServer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-linux_amd64.tar.gz"
-      sha256 "0df729c48ac498f703915c042987c061062e463be407e390834451a40d11391f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-linux_arm64.tar.gz"
+      sha256 "e9d7bdf26e09d09da350a011fc80e84398285a02cebd75aebe2e026d76c8d7ec"
 
       def install
         bin.install "pvault-server"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-linux_arm64.tar.gz"
-      sha256 "27d95cb6610d007d0a2a5a6009c329b152c92b9b35969f1529c1874e6e8b2409"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.9.7/pvault-server-v1.9.7-linux_amd64.tar.gz"
+      sha256 "28f3e0270e2981c2a0b20b15cec5579aa7dd429182d723b357b723ed71e55aa9"
 
       def install
         bin.install "pvault-server"
