@@ -5,21 +5,21 @@
 class PvaultServer < Formula
   desc ""
   homepage "https://piiano.com"
-  version "1.10.3"
+  version "1.10.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.3/pvault-server-v1.10.3-darwin_arm64.tar.gz"
-      sha256 "f66652e84f9e817a5001e1667bb656fdb71437e1303a9cdc45fe95202d7f5b5f"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-server-v1.10.4-darwin_arm64.tar.gz"
+      sha256 "44ba67329c93d23ed6745e4bcb7a77bd49bb72aaa18619f5934bb0b74775096b"
 
       def install
         bin.install "pvault-server"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.3/pvault-server-v1.10.3-darwin_amd64.tar.gz"
-      sha256 "f3800d2c5116d26726a1ae21d0949a88dc236f160e0d939912a55475865ed117"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-server-v1.10.4-darwin_amd64.tar.gz"
+      sha256 "0be2e557c0a893587b95ca87d49520c32fb3e1cf119b7ed79ea4c157d807054c"
 
       def install
         bin.install "pvault-server"
@@ -28,17 +28,17 @@ class PvaultServer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.3/pvault-server-v1.10.3-linux_arm64.tar.gz"
-      sha256 "3735b7eff8b2b0a1503a30361c8c6106c60a9cb42e4514af18d43afeb5982d71"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-server-v1.10.4-linux_amd64.tar.gz"
+      sha256 "19ec0e16d75d8373bbcf81ac8e69221c9a1550beebec5148c6f0acb0448312fc"
 
       def install
         bin.install "pvault-server"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.3/pvault-server-v1.10.3-linux_amd64.tar.gz"
-      sha256 "4fbc0c4f56b4b5713b1dc3e9a99bace13f499ac2a79f9b10d4ae3baee28eb798"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-server-v1.10.4-linux_arm64.tar.gz"
+      sha256 "bdde42ee562308fb1ad0491165e9da263f4e48d7bfda3cba97a9e6b248e45e4e"
 
       def install
         bin.install "pvault-server"
