@@ -5,13 +5,13 @@
 class PvaultCli < Formula
   desc ""
   homepage "https://piiano.com"
-  version "1.10.4"
+  version "1.11.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-cli-v1.10.4-darwin_arm64.tar.gz"
-      sha256 "d76dc6a075cfbb2919f9838fd839b73ea4bfa3b0e1e561c47ca849b6e52ae503"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.11.0/pvault-cli-v1.11.0-darwin_amd64.tar.gz"
+      sha256 "908f81ace870199f492669d65bcbc308b93b4a370dff092006ba7a326b45a1aa"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -19,9 +19,9 @@ class PvaultCli < Formula
         (zsh_completion/"_pvault").write Utils.safe_popen_read("#{bin}/pvault completions zsh")
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-cli-v1.10.4-darwin_amd64.tar.gz"
-      sha256 "dc7d0c2caa56e6d07b2bd6d111798bced7552355532b9fa511e03820e2f0b87b"
+    if Hardware::CPU.arm?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.11.0/pvault-cli-v1.11.0-darwin_arm64.tar.gz"
+      sha256 "d45aafcdf51d4e78f510a073583c607cea625b472f2e69fd2743b2c17ca7babb"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -32,9 +32,9 @@ class PvaultCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-cli-v1.10.4-linux_arm64.tar.gz"
-      sha256 "9660c759cb48953ab2f1b19bdeeb766ec8ff33a9e2dbf4bb18fb3e881236b1b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.11.0/pvault-cli-v1.11.0-linux_amd64.tar.gz"
+      sha256 "ab3a53f6f4d6189b49a16f7ab853f34e0cc7c67ae553a2355aff2d624002eb15"
 
       def install
         bin.install "pvault-cli" => "pvault"
@@ -42,9 +42,9 @@ class PvaultCli < Formula
         (zsh_completion/"_pvault").write Utils.safe_popen_read("#{bin}/pvault completions zsh")
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/piiano/vault-releases/releases/download/v1.10.4/pvault-cli-v1.10.4-linux_amd64.tar.gz"
-      sha256 "d54ca3900f98795bfff0e287ab257e9a2f51203af58a625b1f0360098ee541f9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/piiano/vault-releases/releases/download/v1.11.0/pvault-cli-v1.11.0-linux_arm64.tar.gz"
+      sha256 "c382a6e57ee2eac4236ac21ed2a25712f5453d8b7df8819f8c3bfd3b5fc9532a"
 
       def install
         bin.install "pvault-cli" => "pvault"
