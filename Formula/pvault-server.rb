@@ -5,21 +5,21 @@
 class PvaultServer < Formula
   desc ""
   homepage "https://piiano.com"
-  version "1.11.2"
+  version "1.11.3"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/piiano/vault-releases/releases/download/v1.11.2/pvault-server-v1.11.2-darwin_amd64.tar.gz"
-      sha256 "0cef5adba174e529e6f7e54f747480240be2600a387b5a57a559c58dfbb2a8bc"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.11.3/pvault-server-v1.11.3-darwin_amd64.tar.gz"
+      sha256 "17d380bc265339fff536c0974f0952d56e3841bcd8e41b4f2ce85bba682e6ce5"
 
       def install
         bin.install "pvault-server"
       end
     end
     on_arm do
-      url "https://github.com/piiano/vault-releases/releases/download/v1.11.2/pvault-server-v1.11.2-darwin_arm64.tar.gz"
-      sha256 "d2c712d41b4e1a222e834cec4dca0d0bed881c76e5951ce26c8588d128b94509"
+      url "https://github.com/piiano/vault-releases/releases/download/v1.11.3/pvault-server-v1.11.3-darwin_arm64.tar.gz"
+      sha256 "a0365cb763130b665d0f3bfae70318bd6d0d22d9321ac8a4e2fec1c0e9392cf4"
 
       def install
         bin.install "pvault-server"
@@ -30,8 +30,8 @@ class PvaultServer < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/piiano/vault-releases/releases/download/v1.11.2/pvault-server-v1.11.2-linux_amd64.tar.gz"
-        sha256 "1c1be0262569958cc4fbbea2d605b91252b9bb8ea719271794cd0751ffc16be6"
+        url "https://github.com/piiano/vault-releases/releases/download/v1.11.3/pvault-server-v1.11.3-linux_amd64.tar.gz"
+        sha256 "bdf153f350547da9fbaacf4af4efab768ccdbdd57c4b6342228eae9ee5fb3621"
 
         def install
           bin.install "pvault-server"
@@ -40,8 +40,8 @@ class PvaultServer < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/piiano/vault-releases/releases/download/v1.11.2/pvault-server-v1.11.2-linux_arm64.tar.gz"
-        sha256 "21416e35c3b00529ef94b345173c660865dbd6fcc33c47a4724c352e68a96fd7"
+        url "https://github.com/piiano/vault-releases/releases/download/v1.11.3/pvault-server-v1.11.3-linux_arm64.tar.gz"
+        sha256 "8180636d962f94e62c8f60cd88385ba3668f3a691ce427e93f32af1c853a0e49"
 
         def install
           bin.install "pvault-server"
